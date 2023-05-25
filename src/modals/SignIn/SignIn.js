@@ -1,12 +1,19 @@
-import React, {useId} from 'react';
+import React, {useId, useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-export default function SignIn({openRegModal}){
+export default function SignIn(){
+
+    const [modalRegState, setModalRegState] = useState(false);
+
+    const openRegModal = () => {
+        setModalRegState(!modalRegState)
+    }
 
 
     let useCode = useId();
 
-    return (
+    function SignInForm(){
+        return(
             <>
                 <div className='sign_in_modal_bkg' onClick={openRegModal}>
 
@@ -98,6 +105,20 @@ export default function SignIn({openRegModal}){
                         </Formik>
                     </div>
                 </div>
+            </>
+        )
+    }
+
+
+
+    return (
+            <>
+                <button className='sign_in_btn' onClick={openRegModal}>Sign in</button>
+
+                {
+                    modalRegState ? <SignInForm/> : null
+
+                }
 
             </>
 
