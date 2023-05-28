@@ -1,0 +1,79 @@
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    background-color: skyblue;
+    z-index: 99;
+}
+.sign_in_btn{
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px 2px 1px rgba(25,25,25,0.5);
+    font-weight: 600;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+}
+.sign_in_modal_bkg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25,25,25,0.7);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.sign_in_modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.sign_in_modal_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    z-index: 999999;
+    pointer-events: auto;
+}
+.sign_in_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form_item{
+    margin: 10px;
+    width: 100%;
+    max-width: 320px;
+}
+.form_item input{
+    padding: 6px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #3e3e3e;
+}
