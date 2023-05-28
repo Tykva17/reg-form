@@ -15,6 +15,7 @@ export default function SignIn(){
     function SignInForm(){
         return(
             <>
+
                 <div className='sign_in_modal_bkg' onClick={openRegModal}>
 
                 </div>
